@@ -8,7 +8,7 @@ const postSchema = new mongoose.Schema({
     date_create: { type: String },
     location: { type: String },
     province: { type: String },
-    tags: Array
+    tags: Array,
 })
 
 module.exports = mongoose.model('post', postSchema);
