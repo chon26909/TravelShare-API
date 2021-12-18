@@ -1,0 +1,10 @@
+steps:
+- name: "gcr.io/cloud-builders/docker"
+  args:
+  - build
+  - "--tag=gcr.io/$PROJECT_ID/quickstart-image"
+  - "--file=./path/to/YourDockerFile"
+  - .
+...
+images:
+- "gcr.io/$PROJECT_ID/quickstart-image"
