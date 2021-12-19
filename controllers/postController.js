@@ -19,5 +19,6 @@ const addPost = async = (req,res) => {
 }
 
 module.exports = { 
-    getAllPost
+    getAllPost,
+    addPost
 }
