@@ -10,7 +10,7 @@ const getAllPost = async (req, res) => {
     }
 }
 
-const addPost = async = (req) => { 
+const addPost = async = (req,res) => { 
     try {
         
     } catch (error) {
