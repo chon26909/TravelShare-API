@@ -8,6 +8,6 @@ require('./config/database').connect();
 app.use(cors());
 app.use(express.json());
 
-// app.use('/api/post', require('./routes/postRoute.route'));       
+app.use('/api/post', require('./routes/postRoute.route'));       
 
 module.exports = app;
