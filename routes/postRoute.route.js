@@ -4,6 +4,6 @@ const postController = require('../controllers/postController');
 
 router.get('/', postController.getAllPost);
 router.post('/', postController.addPost);
-router.get('/search', )
+router.get('/search', postController.searchPostByText);
 
 module.exports = router;
