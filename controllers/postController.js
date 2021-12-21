@@ -50,5 +50,6 @@ const searchPostByText = async (req, res) => {
 
 module.exports = { 
     getAllPost,
-    addPost
+    addPost,
+    searchPostByText
 }
