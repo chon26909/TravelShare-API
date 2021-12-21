@@ -30,6 +30,24 @@ const addPost = async = (req,res) => {
     }
 }
 
+const searchPostByText = async (req, res) => {
+
+    let { text } = req.query;
+    text = text.replace(/\s/g,"|")
+
+    console.log("query ",new RegExp(text))
+
+    try {
+        const posts = await Post.find({ title: { $regex: new RegExp(text) } });
+        res.json(posts);
+
+    } catch (error) {
+        console.log("get posts error ", error);
+        res.json({ message: "not found in database" });
+    }
+}
+
+
 module.exports = { 
     getAllPost,
     addPost
