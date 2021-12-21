@@ -7,6 +7,7 @@ const getAllPost = async (req, res) => {
 
     try {
         const posts = await Post.find();
+        res.json(posts);
     } catch (error) {
         console.log('error get post', error)
         res.json({ message: 'note found in database'});
