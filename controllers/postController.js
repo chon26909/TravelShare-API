@@ -33,6 +33,11 @@ const addPost = async = (req,res) => {
 const searchPostByText = async (req, res) => {
 
     let { text } = req.query;
+
+    if (!text || text.length < 0) {
+        // res.json({ message: 'please input text to query' })
+    }
+
     text = text.replace(/\s/g,"|");
 
     console.log("query ",new RegExp(text))
